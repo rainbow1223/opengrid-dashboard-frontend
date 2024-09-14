@@ -2,20 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { LuLayoutDashboard, LuBox, LuInbox } from "react-icons/lu";
-import {
-  PiWalletBold,
-  PiHandCoinsBold,
-  
-  PiDiceThree,
-} from "react-icons/pi";
+import { PiWalletBold, PiHandCoinsBold, PiDiceThree } from "react-icons/pi";
 
-import {
-  FaBook,
-  FaMedium,
-  FaTelegram,
-  FaTwitter,
-  FaYoutube,
-} from "react-icons/fa6";
+import { FaBook, FaTelegram, FaTwitter } from "react-icons/fa6";
 import { TbBrandPowershell } from "react-icons/tb";
 
 import { AddCreditModal } from "../Modals";
@@ -49,7 +38,7 @@ export function Sidebar({ active = -1 }) {
 
           <ul className="flex flex-col gap-4">
             <li>
-              <Link to="/vps">
+              <Link to="/gpu">
                 <div
                   className={`flex items-center border border-indigo-900 rounded-xl ${
                     active === 2 ? "bg-indigo-600" : "bg-gray-900"
@@ -61,16 +50,14 @@ export function Sidebar({ active = -1 }) {
               </Link>
             </li>
             <li>
-              
-                <div
-                  className={`flex items-center border border-indigo-900 rounded-xl ${
-                    active === 3 ? "bg-indigo-600" : "bg-gray-900"
-                  } text-white px-5 py-2 gap-5`}
-                >
-                  <FaHome className="text-xl text-indigo-400" />
-                  Leaderboard 
-                </div>
-             
+              <div
+                className={`flex items-center border border-indigo-900 rounded-xl ${
+                  active === 3 ? "bg-indigo-600" : "bg-gray-900"
+                } text-white px-5 py-2 gap-5`}
+              >
+                <FaHome className="text-xl text-indigo-400" />
+                Leaderboard
+              </div>
             </li>
             <li>
               <div className="flex items-center rounded-xl bg-gray-900 text-gray-400 px-5 py-2 gap-5">
@@ -102,24 +89,23 @@ export function Sidebar({ active = -1 }) {
                 </div>
               </Link>
             </li> */}
-          </ul> 
+          </ul>
 
           <div className="mt-4 border-none h-px bg-indigo-800" />
 
           <h3 className="my-4 text-sm uppercase text-indigo-500/50">manage</h3>
 
           <ul className="flex flex-col gap-4">
-            
-
             <li>
               <div className="flex items-center rounded-xl bg-gray-900 text-gray-400 px-5 py-2 gap-5">
-                <LuInbox className="text-xl text-gray-400" /> Marketplace
+                <LuInbox className="text-xl text-gray-400" /> Node AI Marketplace
               </div>
             </li>
 
             <li>
               <div className="flex items-center rounded-xl bg-gray-900 text-gray-400 px-5 py-2 gap-5">
-                <PiDiceThree className="text-xl text-gray-400" /> GPU Sharing Pool
+                <PiDiceThree className="text-xl text-gray-400" /> GPU Sharing
+                Pool
               </div>
             </li>
 
@@ -174,16 +160,11 @@ export function Sidebar({ active = -1 }) {
 
           <ul className="my-4 flex justify-between text-white text-xl">
             <li>
-              <FaYoutube />
-            </li>
-            <li>
               <a href="https://x.com/OpenGRID_ERC" target="_blank">
                 <FaTwitter />
               </a>
             </li>
-            <li>
-              <FaMedium />
-            </li>
+
             <li>
               <a href="https://t.me/OpenGRID" target="_blank">
                 <FaTelegram />

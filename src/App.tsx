@@ -27,7 +27,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/vps" element={<VPS />} />
+            <Route path="/gpu" element={<VPS />} />
             <Route path="/nodes" element={<Nodes />} />
             <Route path="/data-centers" element={<DataCenters />} />
             <Route path="/billing" element={<Billing />} />
