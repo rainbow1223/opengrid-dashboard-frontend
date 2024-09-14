@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { LuLayoutDashboard, LuBox, LuInbox } from "react-icons/lu";
-import { PiWalletBold, PiHandCoinsBold, PiDiceThree } from "react-icons/pi";
+import { LuLayoutDashboard, LuInbox } from "react-icons/lu";
+import { PiWalletBold, PiDiceThree } from "react-icons/pi";
 
+import { LeaderboardSvg, StakingSvg, LiveGPUSvg } from "../../assets";
 import { FaBook, FaTelegram, FaTwitter } from "react-icons/fa6";
 import { TbBrandPowershell } from "react-icons/tb";
 
 import { AddCreditModal } from "../Modals";
-import { FaHome } from "react-icons/fa";
 
 export function Sidebar({ active = -1 }) {
   const [isOpenCreditModal, setOpenCreditModal] = useState(false);
@@ -44,7 +44,8 @@ export function Sidebar({ active = -1 }) {
                     active === 2 ? "bg-indigo-600" : "bg-gray-900"
                   } text-white px-5 py-2 gap-5`}
                 >
-                  <LuBox className="text-xl text-indigo-400" />
+                  <img src={LiveGPUSvg}  />
+                  {/* <LuBox className="text-xl text-indigo-400" /> */}
                   Live GPU
                 </div>
               </Link>
@@ -55,40 +56,21 @@ export function Sidebar({ active = -1 }) {
                   active === 3 ? "bg-indigo-600" : "bg-gray-900"
                 } text-white px-5 py-2 gap-5`}
               >
-                <FaHome className="text-xl text-indigo-400" />
+                <img src={LeaderboardSvg} />
+                {/* < className="text-xl text-indigo-400" /> */}
                 Leaderboard
               </div>
             </li>
             <li>
               <div className="flex items-center rounded-xl bg-gray-900 text-gray-400 px-5 py-2 gap-5">
-                <PiHandCoinsBold className="text-xl text-gray-400" /> Staking
+                {/* <PiHandCoinsBold className="text-xl text-gray-400" /> Staking */}
+                <img src={StakingSvg} />
+                Staking
               </div>
             </li>
-            {/* <li>
-              <Link to="/nodes">
-                <div
-                  className={`flex items-center border border-indigo-900 rounded-xl ${
-                    active === 3 ? "bg-indigo-600" : "bg-gray-900"
-                  } text-white px-5 py-2 gap-5`}
-                >
-                  <GrNodes className="text-xl text-indigo-400" />
-                  Nodes
-                </div>
-              </Link>
-            </li> */}
+            
 
-            {/* <li>
-              <Link to="/data-centers">
-                <div
-                  className={`flex items-center border border-indigo-900 rounded-xl ${
-                    active === 4 ? "bg-indigo-600" : "bg-gray-900"
-                  } text-white px-5 py-2 gap-5`}
-                >
-                  <PiDatabase className="text-xl text-indigo-400" />
-                  Data Centers
-                </div>
-              </Link>
-            </li> */}
+        
           </ul>
 
           <div className="mt-4 border-none h-px bg-indigo-800" />
