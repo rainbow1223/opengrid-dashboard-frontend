@@ -19,6 +19,7 @@ import {
 import { TbBrandPowershell } from "react-icons/tb";
 
 import { AddCreditModal } from "../Modals";
+import { FaHome } from "react-icons/fa";
 
 export function Sidebar({ active = -1 }) {
   const [isOpenCreditModal, setOpenCreditModal] = useState(false);
@@ -55,12 +56,28 @@ export function Sidebar({ active = -1 }) {
                   } text-white px-5 py-2 gap-5`}
                 >
                   <LuBox className="text-xl text-indigo-400" />
-                  VPS
+                  Live GPU
                 </div>
               </Link>
             </li>
-
             <li>
+              
+                <div
+                  className={`flex items-center border border-indigo-900 rounded-xl ${
+                    active === 3 ? "bg-indigo-600" : "bg-gray-900"
+                  } text-white px-5 py-2 gap-5`}
+                >
+                  <FaHome className="text-xl text-indigo-400" />
+                  Leaderboard 
+                </div>
+             
+            </li>
+            <li>
+              <div className="flex items-center rounded-xl bg-gray-900 text-gray-400 px-5 py-2 gap-5">
+                <PiHandCoinsBold className="text-xl text-gray-400" /> Staking
+              </div>
+            </li>
+            {/* <li>
               <Link to="/nodes">
                 <div
                   className={`flex items-center border border-indigo-900 rounded-xl ${
@@ -71,9 +88,9 @@ export function Sidebar({ active = -1 }) {
                   Nodes
                 </div>
               </Link>
-            </li>
+            </li> */}
 
-            <li>
+            {/* <li>
               <Link to="/data-centers">
                 <div
                   className={`flex items-center border border-indigo-900 rounded-xl ${
@@ -84,19 +101,15 @@ export function Sidebar({ active = -1 }) {
                   Data Centers
                 </div>
               </Link>
-            </li>
-          </ul>
+            </li> */}
+          </ul> 
 
           <div className="mt-4 border-none h-px bg-indigo-800" />
 
           <h3 className="my-4 text-sm uppercase text-indigo-500/50">manage</h3>
 
           <ul className="flex flex-col gap-4">
-            <li>
-              <div className="flex items-center rounded-xl bg-gray-900 text-gray-400 px-5 py-2 gap-5">
-                <PiHandCoinsBold className="text-xl text-gray-400" /> Stake
-              </div>
-            </li>
+            
 
             <li>
               <div className="flex items-center rounded-xl bg-gray-900 text-gray-400 px-5 py-2 gap-5">
@@ -106,8 +119,7 @@ export function Sidebar({ active = -1 }) {
 
             <li>
               <div className="flex items-center rounded-xl bg-gray-900 text-gray-400 px-5 py-2 gap-5">
-                <PiDiceThree className="text-xl text-gray-400" /> Become a
-                Provider
+                <PiDiceThree className="text-xl text-gray-400" /> GPU Sharing Pool
               </div>
             </li>
 
@@ -178,10 +190,12 @@ export function Sidebar({ active = -1 }) {
               </a>
             </li>
             <li>
-              <a href="https://opengrid.gitbook.io/opengrid-docs" target="_blank">
+              <a
+                href="https://opengrid.gitbook.io/opengrid-docs"
+                target="_blank"
+              >
                 <FaBook />
               </a>
-              
             </li>
           </ul>
 

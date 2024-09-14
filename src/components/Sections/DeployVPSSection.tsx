@@ -11,7 +11,7 @@ export function DeployVPSSection() {
         </div>
 
         <h3 className="text-center text-white text-lg">
-          Deploy your first VPS
+          Deploy your first GPU
         </h3>
 
         <p className="mt-5 text-center text-indigo-400">
@@ -28,7 +28,7 @@ export function DeployVPSSection() {
               <div className="text-sm">
                 <h3 className="text-white">Deploy VPS</h3>
                 <p className="text-gray-500">
-                  Launch a Virtual Private Server from your preferred
+                  Launch a GPU from your preferred
                   configuration.
                 </p>
               </div>

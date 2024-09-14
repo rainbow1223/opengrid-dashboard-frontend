@@ -12,7 +12,7 @@ export function ConnectWalletSection() {
         <h3 className="text-center text-white text-lg">Connect your wallet</h3>
 
         <p className="mt-5 text-center text-indigo-400">
-          Connect your wallet to manage your VPS and Nodes
+          Connect your wallet to manage your GPUs
         </p>
 
         <div className="mt-5 mx-auto w-40">
