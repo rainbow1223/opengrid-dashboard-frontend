@@ -165,16 +165,23 @@ export function Sidebar({ active = -1 }) {
               <FaYoutube />
             </li>
             <li>
-              <FaTwitter />
+              <a href="https://x.com/OpenGRID_ERC" target="_blank">
+                <FaTwitter />
+              </a>
             </li>
             <li>
               <FaMedium />
             </li>
             <li>
-              <FaTelegram />
+              <a href="https://t.me/OpenGRID" target="_blank">
+                <FaTelegram />
+              </a>
             </li>
             <li>
-              <FaBook />
+              <a href="https://opengrid.gitbook.io/opengrid-docs" target="_blank">
+                <FaBook />
+              </a>
+              
             </li>
           </ul>
 
