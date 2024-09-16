@@ -3,7 +3,7 @@ import { TbCloudDownload, TbCloudUpload } from "react-icons/tb";
 
 import { VPSImage } from "../../assets";
 
-export function VPSCard({ gpu = 0, upsp = 0, downsp = 0 }) {
+export function VPSCard({ name = "", id = "", gpu = 0, upsp = 0, downsp = 0, price = 0 }) {
   const navigate = useNavigate();
 
   return (
@@ -13,11 +13,11 @@ export function VPSCard({ gpu = 0, upsp = 0, downsp = 0 }) {
       </div>
 
       <h3 className="mx-auto text-gray-600 font-medium text-center w-40">
-        Xeon Gold 6226R 16-Core Processor Intel
+        {name}
       </h3>
 
       <h1 className="mt-4 text-indigo-500 text-2xl text-center font-bold">
-        5x NVIDIA GeForce RTX 3090
+        {id}
       </h1>
 
       <div className="mt-4 flex justify-between font-medium text-lg">
@@ -48,7 +48,7 @@ export function VPSCard({ gpu = 0, upsp = 0, downsp = 0 }) {
       </div>
 
       <div className="mt-4 flex justify-between items-center">
-        <p className="text-white font-medium">$1.19 per Hour</p>
+        <p className="text-white font-medium">{price}</p>
 
         <div>
           <button

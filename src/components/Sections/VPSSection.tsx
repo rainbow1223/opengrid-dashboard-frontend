@@ -5,45 +5,53 @@ import { VPSCard } from "../Cards";
 
 const vpss = [
   {
-    gpu: 8,
-    upsp: 277,
-    downsp: 1111,
+    name: "Nvidia RTX5000",
+    id: "1x RTX5000",
+    gpu: 16,
+    upsp: 50,
+    downsp: 448,
+    price: 0.82,
   },
   {
-    gpu: 32,
+    name: "Nvidia RTX6000",
+    id: "1x RTX6000",
+    gpu: 48,
     upsp: 666,
     downsp: 1641,
+    price: 0.97,
   },
   {
-    gpu: 16,
+    name: "Nvidia P40",
+    id: "1x P40",
+    gpu: 24,
     upsp: 495,
     downsp: 1111,
+    price: 2.07
   },
   {
-    gpu: 8,
-    upsp: 495,
-    downsp: 1111,
+    name : "Nvidia H100",
+    id: "1x H100",
+    gpu: 80,
+    upsp: 199993,
+    downsp: 3000000,
+    price: 2.49,
   },
   {
-    gpu: 128,
+    name: "Nvidia P6000",
+    id: "1x P6000",
+    gpu: 24,
     upsp: 321,
     downsp: 645,
+    price: 1.10
   },
   {
-    gpu: 64,
+    name: "Nvidia RTX5000",
+    id: "1x RTX5000",
+    gpu: 16,
     upsp: 495,
     downsp: 791,
-  },
-  {
-    gpu: 64,
-    upsp: 32,
-    downsp: 1791,
-  },
-  {
-    gpu: 128,
-    upsp: 495,
-    downsp: 791,
-  },
+    price: 0.82
+  }
 ];
 
 export function VPSSection() {
@@ -136,9 +144,12 @@ export function VPSSection() {
           return (
             <VPSCard
               key={index}
+              name={vps.name}
+              id={vps.id}
               gpu={vps.gpu}
               upsp={vps.upsp}
               downsp={vps.downsp}
+              price={vps.price}
             />
           );
         })}
