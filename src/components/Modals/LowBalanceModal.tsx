@@ -3,12 +3,12 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import { MdClose } from "react-icons/md";
 
-interface IAddCreditModal {
+interface ILowBalanceModal {
   isOpen: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-export function AddCreditModal({ isOpen, setOpen }: IAddCreditModal) {
+export function LowBalanceModal({ isOpen, setOpen }: ILowBalanceModal) {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -34,29 +34,29 @@ export function AddCreditModal({ isOpen, setOpen }: IAddCreditModal) {
               <span className="sr-only">Close</span>
             </button>
 
-            <h1 className="text-xl font-medium text-left">Add Credit</h1>
+            <h1 className="text-xl font-medium text-left">Low Balance</h1>
 
-            <div className="mt-3 sm:mt-5 p-3 sm:p-5 border border-indigo-950 rounded-xl">
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-1">
-                  <h3>Credit Amount (USD)</h3>
-                  <input
-                    className="px-3 py-1.5 rounded-lg bg-gray-900"
-                    defaultValue={0}
-                  />
-                  <p>Minimum amount: $50.00</p>
-                </div>
+            <p className="text-indigo-400/60 text-sm">
+              You cannot deploy this service, your balance is lower than the
+              plan you chose.
+            </p>
 
-                <div className="flex flex-col gap-1">
-                  <h3>Currency</h3>
-                  <input
-                    className="px-3 py-1.5 rounded-lg bg-gray-900"
-                    defaultValue="VPS AI"
-                    readOnly
-                  />
-                  <p>Minimum payment: $50.00</p>
-                </div>
-              </div>
+            <div className="mt-3 flex justify-between text-sm">
+              <p className="font-medium text-gray-400">Your Credit:</p>
+              <p>$0.00</p>
+            </div>
+
+            <div className="mt-1 flex justify-between text-sm">
+              <p className="font-medium text-gray-400">
+                Minimum Credit needed for 5 days:
+              </p>
+              <p>$2.00</p>
+            </div>
+
+            <div className="mt-3 flex justify-end">
+              <button className="w-32 border border-indigo-900 p-2 rounded-xl">
+                Add To Credit
+              </button>
             </div>
           </motion.div>
         </motion.div>

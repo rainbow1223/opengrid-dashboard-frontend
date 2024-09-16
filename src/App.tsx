@@ -3,7 +3,15 @@ import { createWeb3Modal } from "@web3modal/wagmi/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { WagmiProvider } from "wagmi";
 
-import { Billing, Dashboard, DataCenters, Nodes, SSHKeys, VPS } from "./pages";
+import {
+  Billing,
+  Dashboard,
+  DataCenters,
+  Nodes,
+  SSHKeys,
+  VPS,
+  VPSCreate,
+} from "./pages";
 import { config, projectId } from "./config";
 
 const queryClient = new QueryClient();
@@ -28,6 +36,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/gpu" element={<VPS />} />
+            <Route path="/deploy/new" element={<VPSCreate />} />
             <Route path="/nodes" element={<Nodes />} />
             <Route path="/data-centers" element={<DataCenters />} />
             <Route path="/billing" element={<Billing />} />

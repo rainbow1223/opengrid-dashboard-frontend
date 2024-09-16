@@ -1,8 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import { TbCloudDownload, TbCloudUpload } from "react-icons/tb";
 
 import { VPSImage } from "../../assets";
 
 export function VPSCard({ gpu = 0, upsp = 0, downsp = 0 }) {
+  const navigate = useNavigate();
+
   return (
     <div className="border border-indigo-950 rounded-3xl py-5 px-7">
       <div className="flex justify-center">
@@ -48,7 +51,10 @@ export function VPSCard({ gpu = 0, upsp = 0, downsp = 0 }) {
         <p className="text-white font-medium">$1.19 per Hour</p>
 
         <div>
-          <button className="border border-purple-600 w-32 rounded-full text-white text-center py-2">
+          <button
+            onClick={() => navigate("/deploy/new")}
+            className="border border-purple-600 w-32 rounded-full text-white text-center py-2"
+          >
             Rent Now
           </button>
         </div>

@@ -3,12 +3,12 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import { MdClose } from "react-icons/md";
 
-interface IAddCreditModal {
+interface IAddSSHKeyModal {
   isOpen: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-export function AddCreditModal({ isOpen, setOpen }: IAddCreditModal) {
+export function AddSSHKeyModal({ isOpen, setOpen }: IAddSSHKeyModal) {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -34,29 +34,24 @@ export function AddCreditModal({ isOpen, setOpen }: IAddCreditModal) {
               <span className="sr-only">Close</span>
             </button>
 
-            <h1 className="text-xl font-medium text-left">Add Credit</h1>
+            <h1 className="text-xl font-medium text-left">Add an SSH key</h1>
 
-            <div className="mt-3 sm:mt-5 p-3 sm:p-5 border border-indigo-950 rounded-xl">
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-1">
-                  <h3>Credit Amount (USD)</h3>
-                  <input
-                    className="px-3 py-1.5 rounded-lg bg-gray-900"
-                    defaultValue={0}
-                  />
-                  <p>Minimum amount: $50.00</p>
-                </div>
+            <p className="text-indigo-500/50">
+              You can add this SSH key to your server to securely connect to it
+            </p>
 
-                <div className="flex flex-col gap-1">
-                  <h3>Currency</h3>
-                  <input
-                    className="px-3 py-1.5 rounded-lg bg-gray-900"
-                    defaultValue="VPS AI"
-                    readOnly
-                  />
-                  <p>Minimum payment: $50.00</p>
-                </div>
-              </div>
+            <h3 className="mt-5 text-white">Public Key</h3>
+
+            <textarea
+              className="mt-2 text-white w-full bg-black rounded-xl p-3"
+              rows={4}
+              placeholder="ssh-ed25519 AAAAC3NaC1lZDl1NTE5AAAI..."
+            ></textarea>
+
+            <div className="flex justify-end">
+              <button className="mt-3 w-32 bg-indigo-600 text-white py-2 rounded-lg">
+                Add SSH Key
+              </button>
             </div>
           </motion.div>
         </motion.div>

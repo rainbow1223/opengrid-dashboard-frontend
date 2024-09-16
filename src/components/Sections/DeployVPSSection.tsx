@@ -1,8 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 import { LuLayoutDashboard, LuBox } from "react-icons/lu";
 
 import { LogoMini } from "../../assets";
 
 export function DeployVPSSection() {
+  const navigate = useNavigate();
+
   return (
     <div className="flex justify-center items-center h-full">
       <div className="mx-auto max-w-xl">
@@ -15,7 +19,7 @@ export function DeployVPSSection() {
         </h3>
 
         <p className="mt-5 text-center text-indigo-400">
-          Launch a GPU for your preferred configuration
+          Launch a GPU from your preferred configuration
         </p>
 
         <div className="mt-5">
@@ -34,7 +38,10 @@ export function DeployVPSSection() {
             </div>
 
             <div>
-              <button className="font-medium text-sm text-white border border-indigo-900 rounded-lg px-5 py-1.5">
+              <button
+                onClick={() => navigate("/deploy/new")}
+                className="font-medium text-sm text-white border border-indigo-900 rounded-lg px-5 py-1.5"
+              >
                 Deploy
               </button>
             </div>

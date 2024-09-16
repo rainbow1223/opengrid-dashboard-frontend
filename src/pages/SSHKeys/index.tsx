@@ -19,7 +19,12 @@ export function SSHKeys() {
             <div>
               <img src={Logo} />
             </div>
-            <div className="">
+
+            <div className="flex gap-2 items-center">
+              <div className="w-20">
+                <p className="text-indigo-500/50 text-sm">Balance</p>
+                <p className="mt-px text-white text-sm font-medium">0 $GRID</p>
+              </div>
               <ConnectButton />
             </div>
           </nav>
