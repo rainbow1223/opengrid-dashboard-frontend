@@ -54,7 +54,7 @@ export function Sidebar({ active = -1 }) {
                 className={`flex items-center rounded-xl bg-gray-900 text-gray-400 px-5 py-2 gap-5`}
               >
                 <img className="w-5" src={LeaderBoardIcon} alt="leaderboard" />
-                Leaderboard <span className="text-xs">(comming soon)</span>
+                Leaderboard <span className="text-xs">(coming soon)</span>
               </div>
             </li>
 
@@ -63,7 +63,7 @@ export function Sidebar({ active = -1 }) {
                 className={`flex items-center rounded-xl bg-gray-900 text-gray-400 px-5 py-2 gap-5`}
               >
                 <img className="w-5" src={StakingIcon} alt="staking" />
-                Staking <span className="text-xs">(comming soon)</span>
+                Staking <span className="text-xs">(coming soon)</span>
               </div>
             </li>
           </ul>
@@ -169,7 +169,7 @@ export function Sidebar({ active = -1 }) {
           <div className="border-none h-px bg-indigo-950" />
 
           <div className="mt-4 text-center text-sm text-indigo-400">
-            &copy; 2024. All right reserved
+            &copy; 2024. All rights reserved
           </div>
         </div>
       </aside>
